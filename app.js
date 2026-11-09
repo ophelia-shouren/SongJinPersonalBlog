@@ -13,6 +13,7 @@ form.addEventListener('submit', event => {
     input.reportValidity();
     return;
   }
+  try { sessionStorage.setItem('journal-nickname', nickname); } catch (_) {}
   identity.textContent = '访客 · ' + nickname;
   entry.hidden = true;
   journal.hidden = false;
@@ -23,6 +24,7 @@ form.addEventListener('submit', event => {
 input.addEventListener('input', () => input.setCustomValidity(''));
 
 leave.addEventListener('click', () => {
+  try { sessionStorage.removeItem('journal-nickname'); } catch (_) {}
   form.reset();
   identity.textContent = 'SONG JIN & LONG SHOUREN';
   journal.hidden = true;
@@ -30,3 +32,12 @@ leave.addEventListener('click', () => {
   entry.hidden = false;
   input.focus();
 });
+
+try {
+  const saved = sessionStorage.getItem('journal-nickname');
+  if (saved) {
+    identity.textContent = '访客 · ' + saved;
+    entry.hidden = true; journal.hidden = false; leave.hidden = false;
+    if (location.hash === '#hp-world') requestAnimationFrame(() => document.getElementById('hp-world').scrollIntoView());
+  }
+} catch (_) {}
