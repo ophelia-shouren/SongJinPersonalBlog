@@ -24,7 +24,7 @@ input.addEventListener('input', () => input.setCustomValidity(''));
 
 leave.addEventListener('click', () => {
   form.reset();
-  identity.textContent = 'YEARNWINGWINGS / JOURNAL';
+  identity.textContent = 'SONG JIN & LONG SHOUREN';
   journal.hidden = true;
   leave.hidden = true;
   entry.hidden = false;
