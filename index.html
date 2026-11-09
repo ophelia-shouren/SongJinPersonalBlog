@@ -3,14 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>翼间手记 · 翻开手记</title>
-  <link rel="stylesheet" href="/style.css">
-  <script src="/app.js" defer></script>
+  <title>翼间手记 · 宋真个人博客</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./app.js" defer></script>
 </head>
 <body>
-  <header class="top"><span class="brand"><span aria-hidden="true">✳</span> 翼间手记</span>
+  <header class="top">
+    <span class="brand"><span aria-hidden="true">✳</span> 翼间手记</span>
     <span id="identity" class="muted">YEARNWINGWINGS / JOURNAL</span>
-    <button id="logout" class="quiet" hidden>退出登录</button>
+    <button id="leave" class="quiet" type="button" hidden>返回入口</button>
   </header>
   <main>
     <div class="hero">
@@ -18,31 +19,23 @@
       <h1>翼间手记<span>。</span></h1>
       <p>把日常写下来，把值得留住的画面收藏起来。</p>
     </div>
-    <section id="entry" class="card">
+    <section id="entry" class="card" aria-labelledby="entry-title">
       <h2 id="entry-title">翻开手记</h2>
-      <div class="switch" role="group" aria-label="登录身份">
-        <button type="button" data-role="guest" aria-pressed="true">游客登录</button>
-        <button type="button" data-role="owner" aria-pressed="false">博主本人</button>
-      </div>
-      <form id="login">
-        <label>账号<input name="name" required pattern="[A-Za-z0-9_]{3,32}" maxlength="32" autocomplete="username" placeholder="输入账号"></label>
-        <label>密码<input name="password" required maxlength="128" type="password" autocomplete="current-password" placeholder="输入密码"></label>
-        <button class="primary" id="login-submit">登录</button>
+      <form id="nickname-form">
+        <label>昵称<input id="nickname" name="nickname" maxlength="30" required placeholder="你希望我怎么称呼你？"></label>
+        <button class="primary" type="submit">进入博客</button>
       </form>
-      <p id="auth-status" role="status"></p>
-      <button id="register" class="quiet">还没有账号？注册</button>
+      <noscript><p>请启用 JavaScript 后使用昵称进入。</p></noscript>
     </section>
-    <section id="journal" hidden>
-      <div class="section-title"><h2>最新手记</h2><button id="compose" class="primary" hidden>＋ 写手记</button></div>
-      <form id="editor" class="card" hidden>
-        <h2>写一篇手记</h2>
-        <label>标题<input name="title" maxlength="100" placeholder="给这篇手记起个名字（选填）"></label>
-        <label>正文<textarea name="body" maxlength="50000" rows="8" placeholder="从今天的一句话开始……"></textarea></label>
-        <label>配图 · 选填 · 最大 5 MB<input name="photo" type="file" accept="image/png,image/jpeg,image/webp,image/gif"></label>
-        <button class="primary">发布手记</button>
-      </form>
-      <p id="journal-status" role="status"></p>
-      <div id="posts"></div>
+    <section id="journal" aria-labelledby="journal-title" hidden>
+      <div class="section-title"><h2 id="journal-title" tabindex="-1">最新手记</h2></div>
+      <div id="posts">
+        <!-- 发布新手记时，在这里添加 article。 -->
+        <article class="card post">
+          <h3>欢迎来到翼间手记</h3>
+          <p>这里是宋真的个人博客。以后的文字、照片和故事，都会慢慢放在这里。</p>
+        </article>
+      </div>
     </section>
   </main>
   <footer>翼间手记 <span>✦</span> YEARNWINGWINGS</footer>
