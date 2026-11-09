@@ -125,3 +125,22 @@ footer { border-top: 1px solid var(--rule); margin-top: 2rem; }
 .skip-link:focus{top:1rem}
 @media(max-width:860px){.reader-shell{grid-template-columns:1fr;gap:1.2rem}.reader-aside{position:static}.reader-aside nav{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:1rem}.reader-aside a{font-size:.85rem}.reader-paper{padding-top:2rem}.reader-heading{padding-bottom:1.4rem;margin-bottom:1.8rem}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+/* Detailed archive and original-ratio artwork */
+.toc-controls{display:grid;grid-template-columns:minmax(0,1fr) minmax(7rem,.5fr);gap:1rem;margin-bottom:.8rem}
+.toc-controls label{font:.8rem/1.7 system-ui,sans-serif;color:#765d65;display:grid;gap:.4rem;min-width:0}
+.toc-controls input,.toc-controls select{font: .95rem/1.5 system-ui,sans-serif;width:100%;min-width:0;flex:none;box-sizing:border-box;padding:.7rem;background:#faf5ef;color:var(--ink);border:1px solid #cbb8b2;border-radius:0}
+#toc-status{margin:.5rem 0 1.4rem;min-height:1.5em}
+.toc-card{min-width:0}
+.toc-detail{padding:.8rem 1.2rem;border:1px solid #d2beb9;border-top:0;background:#f1e4df}
+.toc-detail summary,.reader-menu summary{cursor:pointer;font:.9rem/1.8 var(--serif);color:#72515e}
+.toc-detail nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.4rem 1.1rem;padding-top:.9rem}
+.toc-detail a{font:.9rem/1.9 var(--serif);text-decoration:none;border-bottom:1px solid #ddcbc6;padding:.35rem 0;overflow-wrap:anywhere}
+.toc-detail a:hover,.question-toc a:hover{text-decoration:underline}
+.reader-menu nav{padding-top:.8rem}
+.art-gallery{max-width:none}
+.artwork{margin:0 0 1.6rem;padding:.6rem;background:#fff;border:1px solid #dfd0c9}
+.artwork:last-child{margin-bottom:0}
+.artwork a{display:block}
+.artwork img{display:block;width:100%;height:auto;max-width:1280px;object-fit:contain;margin:0 auto;aspect-ratio:auto}
+.art-gallery+.reader-bottom{margin-top:2rem}
+@media(max-width:600px){.toc-controls{grid-template-columns:1fr}.toc-detail nav{grid-template-columns:1fr}.artwork{padding:.3rem;margin-inline:-.45rem}}
