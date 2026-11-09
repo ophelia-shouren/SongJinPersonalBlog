@@ -62,8 +62,8 @@ button:hover { background: #523b40; }
 nav { display: flex; gap: 1.2rem; flex-wrap: wrap; }
 a { color: #573c44; text-underline-offset: .25em; }
 .chapter { display: grid; grid-template-columns: minmax(9rem, 1fr) 3fr; border: 1px solid var(--rule); margin: 1.2rem 0; }
-.chapter > header, .entries { padding: clamp(1rem, 3vw, 2.3rem); }
-.chapter h3 { margin: .3em 0 0; font-size: clamp(1.9rem, 4vw, 3rem); }
+.chapter > header, .entries { min-width: 0; padding: clamp(1rem, 3vw, 2.3rem); }
+.chapter h3 { overflow-wrap: anywhere; line-height: 1.5; margin: .3em 0 0; font-size: clamp(1.9rem, 4vw, 3rem); }
 .rose > header { background: var(--rose); }
 .sage > header { background: var(--sage); }
 .entries { min-width: 0; background: #f6f0e8; }
