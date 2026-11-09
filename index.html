@@ -3,41 +3,64 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>翼间手记 · 宋真个人博客</title>
+  <meta name="theme-color" content="#eee7dd">
+  <title>仁间瑾——宋瑾&amp;龙守仁个人情侣blog</title>
   <link rel="stylesheet" href="./style.css">
   <script src="./app.js" defer></script>
 </head>
 <body>
-  <header class="top">
-    <span class="brand"><span aria-hidden="true">✳</span> 翼间手记</span>
-    <span id="identity" class="muted">YEARNWINGWINGS / JOURNAL</span>
+  <header class="masthead">
+    <span class="imprint"><span aria-hidden="true">仁</span> 仁间瑾</span>
+    <span id="identity">SONG JIN &amp; LONG SHOUREN</span>
     <button id="leave" class="quiet" type="button" hidden>返回入口</button>
   </header>
   <main>
-    <div class="hero">
-      <div class="eyebrow">✦ &nbsp; PERSONAL JOURNAL</div>
-      <h1>翼间手记<span>。</span></h1>
-      <p>把日常写下来，把值得留住的画面收藏起来。</p>
-    </div>
-    <section id="entry" class="card" aria-labelledby="entry-title">
-      <h2 id="entry-title">翻开手记</h2>
-      <form id="nickname-form">
-        <label>昵称<input id="nickname" name="nickname" maxlength="30" required placeholder="你希望我怎么称呼你？"></label>
-        <button class="primary" type="submit">进入博客</button>
-      </form>
-      <noscript><p>请启用 JavaScript 后使用昵称进入。</p></noscript>
-    </section>
-    <section id="journal" aria-labelledby="journal-title" hidden>
-      <div class="section-title"><h2 id="journal-title" tabindex="-1">最新手记</h2></div>
-      <div id="posts">
-        <!-- 发布新手记时，在这里添加 article。 -->
-        <article class="card post">
-          <h3>欢迎来到翼间手记</h3>
-          <p>这里是宋真的个人博客。以后的文字、照片和故事，都会慢慢放在这里。</p>
-        </article>
+    <div class="cover">
+      <div class="cover-copy">
+        <p class="folio"><span>PRIVATE JOURNAL</span><span>VOL. 01</span></p>
+        <h1>仁间瑾<span>——宋瑾&amp;龙守仁个人情侣blog</span></h1>
+        <p class="dedication">把日子写给彼此，也写给以后的我们。</p>
+        <section id="entry" aria-labelledby="entry-title">
+          <h2 id="entry-title">访客留名</h2>
+          <form id="nickname-form">
+            <label for="nickname" class="sr-only">访客昵称</label>
+            <input id="nickname" name="nickname" maxlength="30" required placeholder="写下你的昵称">
+            <button type="submit">翻开手记 <span aria-hidden="true">↗</span></button>
+          </form>
+          <noscript><p>请启用 JavaScript 后使用昵称进入。</p></noscript>
+        </section>
       </div>
+      <figure class="plate" aria-hidden="true">
+        <svg viewBox="0 0 320 370" fill="none">
+          <rect x="13" y="13" width="294" height="344" stroke="currentColor" opacity=".6"/>
+          <rect x="21" y="21" width="278" height="328" stroke="currentColor" opacity=".25"/>
+          <ellipse cx="160" cy="174" rx="103" ry="126" stroke="currentColor" opacity=".55"/>
+          <ellipse cx="160" cy="174" rx="95" ry="118" stroke="currentColor" opacity=".25"/>
+          <g stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M135 281C165 220 192 153 180 80M180 80C164 68 165 54 170 48C181 57 187 68 180 80ZM174 124C155 120 144 101 145 86C163 94 175 106 174 124ZM183 111C204 105 217 88 218 72C200 77 187 93 183 111ZM169 170C148 165 134 148 131 130C150 136 168 151 169 170ZM173 155C197 152 216 136 221 119C202 120 181 137 173 155ZM156 208C178 208 200 196 207 180C186 178 165 191 156 208Z"/>
+            <path d="M184 281C155 244 129 200 112 150M112 150C98 145 94 130 96 118C110 125 116 136 112 150ZM125 181C109 181 96 172 89 158C105 156 119 167 125 181ZM132 195C144 185 148 171 144 159C132 168 127 183 132 195ZM149 225C129 229 112 220 102 207C120 202 137 210 149 225ZM162 246C173 233 177 218 171 205C158 217 155 234 162 246Z"/>
+            <path d="M145 258Q160 249 176 258M145 258Q127 260 124 271Q138 273 149 258M173 258Q190 259 195 269Q183 276 170 258"/>
+          </g>
+          <text x="160" y="329" text-anchor="middle" fill="currentColor" font-family="Georgia, serif" font-size="10" letter-spacing="4">FIG. I · TWO STEMS</text>
+        </svg>
+      </figure>
+    </div>
+    <section id="journal" aria-labelledby="journal-title" hidden>
+      <header class="journal-head">
+        <p class="folio">THE ARCHIVE</p>
+        <h2 id="journal-title" tabindex="-1">两人的手记</h2>
+        <nav aria-label="按作者浏览"><a href="#song-jin">01 / 宋瑾</a><a href="#long-shouren">02 / 龙守仁</a></nav>
+      </header>
+      <section id="song-jin" class="chapter rose" aria-labelledby="song-title">
+        <header><span class="folio">01 / SONG JIN</span><h3 id="song-title">宋瑾</h3></header>
+        <div class="entries"><p class="empty">这一卷还没有手记。</p></div>
+      </section>
+      <section id="long-shouren" class="chapter sage" aria-labelledby="long-title">
+        <header><span class="folio">02 / LONG SHOUREN</span><h3 id="long-title">龙守仁</h3></header>
+        <div class="entries"><p class="empty">这一卷还没有手记。</p></div>
+      </section>
     </section>
   </main>
-  <footer>翼间手记 <span>✦</span> YEARNWINGWINGS</footer>
+  <footer><span>仁间瑾</span><span>宋瑾 &amp; 龙守仁</span></footer>
 </body>
 </html>
